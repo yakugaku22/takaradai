@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝台団地住民カルテ</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="card">
+        <h2>宝台団地住民カルテ</h2>
+        <input type="text" id="searchName" placeholder="名前を入力（例: 山田花子）">
+        <button onclick="searchRecord()">検索</button>
+    </div>
+
+    <div class="card">
+        <h3 id="userName"></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>月</th>
+                    <th>体重 (kg)</th>
+                    <th>身長 (cm)</th>
+                    <th>BMI</th>
+                    <th>AGEs値 (AU)</th>
+                    <th>リスク</th>
+                </tr>
+            </thead>
+            <tbody id="recordTable"></tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>体重とBMIの推移</h3>
+        <canvas id="weightChart"></canvas>
+    </div>
+
+    <div class="card">
+        <h3>AGEsの推移</h3>
+        <canvas id="ageChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
